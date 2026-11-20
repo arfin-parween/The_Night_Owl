@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nightowl"
+version = "1.0.0"
+description = "NightOwl: an autonomous AI on-call engineer built with OpenClaw + OpenSearch + Apache Spark"
+requires-python = ">=3.10"
+dependencies = [
+  "pyspark==4.0.5",
+  "opensearch-py>=2.6,<3",
+  "pyyaml>=6",
+  "requests>=2.31",
+]
+
+[project.scripts]
+nightowl = "nightowl.cli:main"
+
+[tool.setuptools]
+packages = ["nightowl"]

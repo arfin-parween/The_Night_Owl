@@ -1,0 +1,16 @@
+.venv/
+.env
+.nightowl_state.json
+__pycache__/
+*.egg-info/
+data/raw/
+output/
+logs/
+config/pipeline.yaml
+spark-warehouse/
+metastore_db/
+derby.log
+.cache/
+
+# OpenClaw backups contain login credentials (credentials.sqlite): never commit
+*openclaw-backup*.tar.gz

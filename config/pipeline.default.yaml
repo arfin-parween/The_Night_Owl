@@ -1,0 +1,24 @@
+pipeline: daily_city_sales
+owner: data-platform-team
+source:
+  orders_path: data/raw/orders
+  stores_path: data/raw/stores/stores.csv
+output_path: output/daily_city_sales
+required_columns:
+- order_id
+- store_id
+- sku
+- category
+- quantity
+- order_amount
+- payment_mode
+- order_ts
+- delivery_minutes
+column_aliases: {}
+data_quality:
+  max_null_rate:
+    store_id: 0.01
+  min_value:
+    order_amount: 0
+  quarantine_bad_rows: false
+  max_quarantine_fraction: 0.5
